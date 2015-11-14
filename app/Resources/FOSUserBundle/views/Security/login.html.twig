@@ -4,8 +4,12 @@
 
 {% block body %}
     {% block fos_user_content %}
+        <div class="jumbotron">
+            <div class="container">
+                <h1>Come on in!</h1>
+            </div><!-- .container -->
+        </div><!-- .container -->
         <div class="container">
-            <h1>Log in to continue</h1>
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-8 col-xs-12">
                     <form action="{{ path("fos_user_security_check") }}" method="post">
@@ -60,7 +64,7 @@
                             </div><!-- .form-group -->
                         </fieldset>
 
-                        <button class="btn btn-primary btn-block btn-lg" type="submit" id="_submit" name="_submit">
+                        <button class="btn btn-primary btn-lg" type="submit" id="_submit" name="_submit">
                             {{ 'security.login.submit'|trans }}
                         </button>
                     </form>
