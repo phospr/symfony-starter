@@ -40,9 +40,45 @@
                     </button>
                     <a class="navbar-brand" href="{{ path('homepage') }}">Phospr</a>
                 </div><!-- .navbar-header -->
+                <div class="navbar-collapse collapse" id="navbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa fa-fw fa-user"></i>
+                                    {{ app.user.username }}
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="{{ path('fos_user_security_logout') }}">
+                                            <i class="fa fa-fw fa-sign-out"></i>
+                                            Logout
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        {% else %}
+                            <li>
+                                <a href="{{ path('fos_user_security_login') }}">
+                                    <i class="fa fa-fw fa-user"></i>
+                                    Login
+                                </a>
+                            </li>
+                        {% endif %}
+                    </ul><!-- .navbar-right -->
+                </div><!-- .navbar-collapse -->
             </div><!-- .container -->
         </nav>
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+            <!-- Bootstrap core JavaScript
+            ================================================== -->
+            <!-- Placed at the end of the document so the pages load faster -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+            <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+            <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+            <!-- <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
+        {% endblock %}
     </body>
 </html>
