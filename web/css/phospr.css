@@ -1,0 +1,27 @@
+body {
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Josephine Sans', sans-serif;
+    font-weight: 300;
+    margin-bottom: 1em;
+    color: #666;
+}
+
+.navbar-inverse {
+    background-color: #333;
+    border-color: #333;
+}
+
+.jumbotron {
+    margin-bottom: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.jumbotron h1 {
+    color: #333;
+    margin-bottom: 30px;
+}
