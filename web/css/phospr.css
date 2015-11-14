@@ -31,3 +31,17 @@ h1, h2, h3, h4, h5, h6 {
     color: #333;
     margin-bottom: 30px;
 }
+
+.btn-primary {
+    background: #e33;
+    border-color: #c33;
+}
+
+.btn-primary.active,
+.btn-primary:active,
+.btn-primary:hover,
+.btn-primary.focus,
+.btn-primary:focus {
+    background: #c33;
+    border-color: #c33;
+}
