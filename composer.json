@@ -7,6 +7,8 @@
         "psr-4": { "": "src/" },
         "files": [ "app/AppKernel.php" ]
     },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "require": {
         "php": ">=5.3.9",
         "symfony/symfony": "2.8.*@dev",
@@ -16,7 +18,8 @@
         "symfony/monolog-bundle": "~2.4",
         "sensio/distribution-bundle": "~5.0@dev",
         "sensio/framework-extra-bundle": "^3.0.2",
-        "incenteev/composer-parameter-handler": "~2.0"
+        "incenteev/composer-parameter-handler": "~2.0",
+        "phospr/user-bundle": "^1.0"
     },
     "require-dev": {
         "sensio/generator-bundle": "~3.0"
