@@ -86,3 +86,7 @@ sonata_block:
         sonata.admin.block.admin_list:
             contexts:   [admin]
         # Your other blocks
+
+fos_rest:
+    view:
+        view_response_listener: true
